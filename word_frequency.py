@@ -22,7 +22,14 @@ def print_word_freq(file):
     new_str = new_str.lower()
     list_of_words = new_str.split()
     print(list_of_words)
+    list_of_words = [word for word in new_str if new_str not in STOP_WORDS]
+    result = ''.join(list_of_words)
+    print(result)
 
+# new_words = []
+# for word in words:
+#     if word not in STOP_WORDS:
+#         new_words.append(word)
 
 def open_file(file):
     with open(file) as file:
